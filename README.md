@@ -1,73 +1,116 @@
-# Welcome to your Lovable project
+Frontend Shoe App
 
-## Project info
+A modern frontend web application built with Vite, React, TypeScript, Tailwind CSS, and shadcn-ui, featuring a clean UI and Supabase integration.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+🚀 Tech Stack
 
-## How can I edit this code?
+Vite – Fast frontend build tool
 
-There are several ways of editing your application.
+React – UI library
 
-**Use Lovable**
+TypeScript – Type-safe JavaScript
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Tailwind CSS – Utility-first CSS framework
 
-Changes made via Lovable will be committed automatically to this repo.
+shadcn-ui – Reusable UI components
 
-**Use your preferred IDE**
+Supabase – Backend-as-a-Service (Auth / Database)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+📁 Project Setup
+Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Make sure you have installed:
 
-Follow these steps:
+Node.js (v18 or later recommended)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+npm / yarn / pnpm
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🔧 Installation
 
-# Step 3: Install the necessary dependencies.
-npm i
+Clone the repository:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+git clone https://github.com/your-username/frontendShoeApp.git
+cd frontendShoeApp
+
+
+Install dependencies:
+
+npm install
+
+
+Run the development server:
+
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The app will be available at:
 
-**Use GitHub Codespaces**
+http://localhost:5173
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🔐 Environment Variables
 
-## What technologies are used for this project?
+This project uses Supabase and requires environment variables.
 
-This project is built with:
+Create a .env file locally (do not commit this file):
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_PUBLISHABLE_KEY=your_supabase_anon_key
+VITE_SUPABASE_PROJECT_ID=your_project_id
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+⚠️ Important:
 
-## Can I connect a custom domain to my Lovable project?
+Environment variables must start with VITE_ to be accessible in the browser.
 
-Yes, you can!
+Never expose Supabase service role keys in a frontend app.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+🏗️ Build for Production
+npm run build
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+Preview the production build locally:
+
+npm run preview
+
+☁️ Deployment (Vercel)
+
+This project is fully compatible with Vercel.
+
+Steps:
+
+Push the project to GitHub
+
+Import the repository into Vercel
+
+Framework preset: Vite
+
+Output directory: dist
+
+Add environment variables in:
+
+Project Settings → Environment Variables
+
+
+Click Deploy
+
+Vercel will automatically build and deploy the app.
+
+🌍 Custom Domain
+
+You can connect a custom domain via:
+
+Vercel Dashboard → Project → Settings → Domains
+
+🧪 Notes & Best Practices
+
+.env files should be added to .gitignore
+
+Only use public Supabase keys in the frontend
+
+Styling is handled via Tailwind CSS and shadcn-ui
+
+Project follows a modern, scalable frontend structure
+
+📄 License
+
+This project is licensed for personal and educational use.
